@@ -1,0 +1,61 @@
+# Simulation Params
+## Robot parameters
+simulation_speed: 1.0
+target_robot_count: 10
+obstacle_robot_count: 4
+frame_rate: 30
+
+## MAV parameters
+vel_xy_p: 1.0
+vel_xy_i: 0.0
+vel_xy_d: 0.5
+vel_xy_max: 2.0
+vel_z_p: 2.0
+vel_z_i: 0.0
+vel_z_d: 0.5
+vel_z_max: 2.0
+
+# Robot Detection Params
+debug_mode: true
+use_webcam: false
+
+# Morphological operations iterations for white filtering
+pre_blur: 2
+
+pre_erosions_w: 0
+dilations_w: 2
+pre_erosions_g: 2
+dilations_g: 8
+post_erosions_g: 2
+
+# HSV filter parameters for the white part of the robot
+h_min_w: 0
+h_max_w: 77
+s_min_w: 0
+s_max_w: 149
+v_min_w: 140
+v_max_w: 256
+
+# HSV filter parameters for the green part of the robot
+h_min_g: 41
+h_max_g: 95
+s_min_g: 55
+s_max_g: 256
+v_min_g: 30
+v_max_g: 256
+
+# HSV filter parameters for the red part of the robot
+h_min_r: 0
+h_max_r: 256
+s_min_r: 0
+s_max_r: 256
+v_min_r: 0
+v_max_r: 256
+
+# Shape detection parameters
+canny_thresh1: 1
+canny_thresh2: 1
+canny_aperture: 3
+poly_area_min: 0
+poly_area_max: 50000
+max_dist: 75
