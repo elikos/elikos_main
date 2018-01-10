@@ -50,8 +50,8 @@ int main(int argc, char* argv[])
 
   while (!tf_listener_.canTransform(ELIKOS_LOCAL_ORIGIN, ELIKOS_FCU, ros::Time(0))) 
   {
-      tf_broadcaster_.sendTransform(tf::StampedTransform(tf::Transform(tf::Quaternion::getIdentity(), tf::Vector3(0.0, 0.0, 0.17)), 
-          ros::Time::now(), ELIKOS_LOCAL_ORIGIN, ELIKOS_VISION));
+      tf_broadcaster_.sendTransform(tf::StampedTransform(tf::Transform(tf::Quaternion::getIdentity(), tf::Vector3(0.0, 0.0, 0.0)), 
+          ros::Time::now(), ELIKOS_LOCAL_ORIGIN, ELIKOS_ARENA_ORIGIN));
   }
 
   tf::StampedTransform initialFcu;
