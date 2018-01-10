@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find elikos_main)/launch/elikos_px4.launch"/>
+    <include file="$(find realsense_ros_slam)/launch/elikos_odometry.launch"/>
+</launch>
