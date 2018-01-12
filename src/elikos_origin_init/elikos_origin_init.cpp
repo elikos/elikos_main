@@ -67,7 +67,7 @@ int main(int argc, char* argv[])
   ros::ServiceServer service = n.advertiseService("elikos_origin_init", initialize);
   
 
-  ros::Rate r(10);
+  ros::Rate r(30);
   while(ros::ok())
   {
     if(reInit_)

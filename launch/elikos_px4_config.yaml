@@ -44,12 +44,12 @@ cmd:
 
 # global_position
 global_position:
-  frame_id: "elikos_local_origin"           # pose and fix frame_id
+  frame_id: "elikos_global_origin"           # pose and fix frame_id
   rot_covariance: 99999.0   # covariance for attitude?
   use_relative_alt: true    # use relative altitude for local coordinates
   tf:
-    send: true               # send TF?
-    frame_id: "elikos_local_origin"  # TF frame_id
+    send: false               # send TF?
+    frame_id: "elikos_global_origin"  # TF frame_id
     global_frame_id: "earth"  # TF earth frame_id
     child_frame_id: "elikos_fcu_gps" # TF child_frame_id
 
@@ -66,7 +66,7 @@ imu:
 local_position:
   frame_id: "elikos_local_origin"
   tf:
-    send: false
+    send: true
     frame_id: "elikos_local_origin"
     child_frame_id: "elikos_fcu"
     send_fcu: false
@@ -152,8 +152,8 @@ image:
 # mocap_pose_estimate
 mocap:
   # select mocap source
-  use_tf: false   # ~mocap/tf
-  use_pose: true  # ~mocap/pose
+  use_tf: true   # ~mocap/tf
+  use_pose: false  # ~mocap/pose
 
 # fake_gps
 fake_gps:
@@ -171,10 +171,10 @@ fake_gps:
   satellites_visible: 5   # virtual number of visible satellites
   fix_type: 3             # type of GPS fix (default: 3D)
   tf:
-    listen: true
+    listen: false
     send: false           # send TF?
-    frame_id: "elikos_local_origin"       # TF frame_id
-    child_frame_id: "elikos_vision" # TF child_frame_id
+    frame_id: "elikos_local_origin_gps"       # TF frame_id
+    child_frame_id: "elikos_vision_gps" # TF child_frame_id
     rate_limit: 10.0      # TF rate
   gps_rate: 5.0           # GPS data publishing rate
 
