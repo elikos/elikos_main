@@ -68,7 +68,7 @@ find_package(OpenCV REQUIRED)
 #   TargetRobot.msg
 #   TargetRobotArray.msg
 #   TrajectoryCmd.msg
-#   AICmd.msg
+#   DMCmd.msg
 #   Matrix3.msg
 #   StampedMatrix3.msg
 #   Intersection.msg
